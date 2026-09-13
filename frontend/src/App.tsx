@@ -173,14 +173,14 @@ function Dashboard({ onBack }: { onBack: () => void }) {
         abi: abiErc20,
         functionName: 'approve',
         args: [POOL_ADDRESS, amount],
-      })
+      } as any)
     } else {
       writeContract({
         address: POOL_ADDRESS,
         abi: abiPool,
         functionName: 'depositCollateral',
         args: [amount],
-      })
+      } as any)
     }
   }
 
@@ -192,7 +192,7 @@ function Dashboard({ onBack }: { onBack: () => void }) {
       abi: abiPool,
       functionName: 'borrow',
       args: [amount],
-    })
+    } as any)
   }
 
   return (
