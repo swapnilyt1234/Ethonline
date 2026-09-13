@@ -1,0 +1,10 @@
+node_modules/
+dist/
+out/
+cache/
+.env
+.env.local
+.vercel/
+broadcast/
+build/
+.DS_Store

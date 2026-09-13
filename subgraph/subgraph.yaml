@@ -1,0 +1,31 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: PassportLendingPool
+    network: arc-testnet
+    source:
+      address: "0x508dE72772F7fFC3Df52164Db3B149EED3718a20"
+      abi: PassportLendingPool
+      startBlock: 61720391
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Borrower
+        - Loan
+      abis:
+        - name: PassportLendingPool
+          file: ./abis/PassportLendingPool.json
+      eventHandlers:
+        - event: LoanRequested(indexed address,indexed uint256,uint256,uint256)
+          handler: handleLoanRequested
+        - event: LoanRepaid(indexed address,indexed uint256)
+          handler: handleLoanRepaid
+        - event: LoanDefaulted(indexed address,indexed uint256)
+          handler: handleLoanDefaulted
+      file: ./src/mapping.ts

@@ -1,0 +1,17 @@
+type Borrower @entity(immutable: false) {
+  id: Bytes!
+  totalRequested: Int!
+  totalRepaid: Int!
+  totalDefaulted: Int!
+  score: Int!
+  loans: [Loan!]! @derivedFrom(field: "borrower")
+}
+
+type Loan @entity(immutable: false) {
+  id: ID!
+  borrower: Borrower!
+  loanId: BigInt!
+  amount: BigInt!
+  repayAmount: BigInt!
+  status: String!
+}

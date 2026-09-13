@@ -1,0 +1,16 @@
+{
+  "name": "eth-online",
+  "version": "0.1.0",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --studio eth-online --version-label 0.1.0",
+    "auth": "graph auth --studio a1ca1915419f3ceb04fad307bba49bb8"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.98.1",
+    "@graphprotocol/graph-ts": "0.38.2",
+    "dotenv": "^17.4.2",
+    "viem": "^2.56.3"
+  }
+}
