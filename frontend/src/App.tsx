@@ -74,17 +74,26 @@ function LandingPage({ onLaunch }: { onLaunch: () => void }) {
       <section className="features">
         <div className="feature-card">
           <h3>The Graph</h3>
-          <p>We index your on-chain lending history across protocols to calculate a live, verifiable credit score.</p>
+          <p>We index your on-chain lending history across protocols to calculate a live, verifiable credit score. This raw data is aggregated via a custom GraphQL Subgraph.</p>
         </div>
         <div className="feature-card">
           <h3>ENS Identity</h3>
-          <p>Your score is linked to your ENS subname (e.g. score.getpassport.eth), readable by any smart contract or AI agent.</p>
+          <p>Your score is linked to your ENS subname (e.g. score.getpassport.eth). We use Sepolia Text Records as a decentralized key-value store readable by any smart contract or AI agent.</p>
         </div>
         <div className="feature-card">
           <h3>Arc Testnet</h3>
-          <p>Our lending pool automatically reads your score. High scores unlock 150% under-collateralized borrowing.</p>
+          <p>Our lending pool automatically reads your score. High scores (>= 70) unlock 150% under-collateralized borrowing directly on the Arc execution layer.</p>
         </div>
       </section>
+
+      <footer className="app-footer">
+        <div className="footer-content">
+          <p className="mono-text">Built for ETHOnline 2026</p>
+          <p className="mono-text" style={{color: 'var(--text-secondary)', fontSize: '0.8rem', marginTop: '0.5rem'}}>
+            Powered by The Graph, ENS, and Arc Testnet
+          </p>
+        </div>
+      </footer>
     </div>
   )
 }
@@ -290,6 +299,15 @@ function Dashboard({ onBack }: { onBack: () => void }) {
           <p className="mono-text" style={{color: 'var(--text-secondary)'}}>Connect Web3 Wallet to load ENS Identity and Arc parameters.</p>
         </div>
       )}
+
+      <footer className="app-footer">
+        <div className="footer-content">
+          <p className="mono-text">Built for ETHOnline 2026</p>
+          <p className="mono-text" style={{color: 'var(--text-secondary)', fontSize: '0.8rem', marginTop: '0.5rem'}}>
+            Powered by The Graph, ENS, and Arc Testnet
+          </p>
+        </div>
+      </footer>
     </div>
   )
 }
