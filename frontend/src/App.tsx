@@ -82,7 +82,7 @@ function LandingPage({ onLaunch }: { onLaunch: () => void }) {
         </div>
         <div className="feature-card">
           <h3>Arc Testnet</h3>
-          <p>Our lending pool automatically reads your score. High scores (>= 70) unlock 150% under-collateralized borrowing directly on the Arc execution layer.</p>
+          <p>Our lending pool automatically reads your score. High scores (&gt;= 70) unlock 150% under-collateralized borrowing directly on the Arc execution layer.</p>
         </div>
       </section>
 
